@@ -16,6 +16,7 @@ def initial_choice():
         wings_story()
     elif apple_choice=='yellow' or apple_choice==' the yellow one' or apple_choice=='the yellow apple':
         print('You burst into flames. ')
+        fire_story()
     else:
         print('Nothing happens. Choose again. ')
         initial_choice()
@@ -41,6 +42,19 @@ def wings_story():
             print('You are stuck by three bolts of lightning. It was raining. ')
     if wings_answer=='no' or wings_answer=='No':
         print('You sit on the ground. ')
+
+def fire_story():
+    fire_answer=input('Would you like to dive into a nearby lake to put out the fire? ')
+    if fire_answer=='yes' or fire_answer=='Yes':
+        fire_direction1=randint(1,3)
+        if fire_direction1==1:
+            print('You sink like a stone into the depths of the lake. ')
+        elif fire_direction1==2:
+            print('You trip over yourself, falling into a fire pit. ')
+        elif fire_direction1==3:
+            print("A very large whale is friendly enough to give you free housing in it's stomach. ")
+    else:
+        print('You slowly burn. ')
 
 
 intro()
