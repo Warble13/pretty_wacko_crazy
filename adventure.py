@@ -21,18 +21,26 @@ def initial_choice():
         initial_choice()
 
 def plant_story():
-    print('You grow for many years. As a plant. ')
+    plant_direction1=randint(1,3)
+    if plant_direction1==1:
+        print('You grow for many years. As a plant. ')
+    elif plant_direction1==2:
+        print('A caterpillar eats you to become a butterlfy. ')
+    elif plant_direction1==3:
+        print('You die from lack of sunlight. ')
 
 def wings_story():
     wings_answer=input('Would you like to fly? ')
     if wings_answer== 'yes' or wings_answer=='Yes':
-        wings_direction=randint(1,3)
-        if wings_direction==1:
+        wings_direction1=randint(1,3)
+        if wings_direction1==1:
             print('You are struck by a meteor shower. ')
-        elif wings_direction==2:
-            print('You fly into a volcano. ')
-        elif wings_direction==3:
+        elif wings_direction1==2:
+            print('You fly into a volcano. Dummy. ')
+        elif wings_direction1==3:
             print('You are stuck by three bolts of lightning. It was raining. ')
+    if wings_answer=='no' or wings_answer=='No':
+        print('You sit on the ground. ')
 
 
 intro()
